@@ -107,10 +107,10 @@ if ($set=="rfid") {
                   <input type="number" name="id" class="form-control" placeholder="Enter id" required> -->
                 </div>
                 <div class="form-group">
-                  <label>Nama</label>
+                  <label>Pilihan Jawaban</label>
                   <input type="text" name="nama" class="form-control" placeholder="nama" value="<?php if(isset($nama)){echo $nama;}?>" required>
-                </div>
-                <div class="form-group">
+                  </div>
+                <!--<div class="form-group">
                   <label>Telp</label>
                   <input type="text" name="telp" class="form-control" placeholder="telp" value="<?php if(isset($telp)){echo $telp;}?>" required>
                 </div>
@@ -125,7 +125,7 @@ if ($set=="rfid") {
                 <div class="form-group">
                   <label>Alamat</label>
                   <input type="text" name="alamat" class="form-control" placeholder="alamat" value="<?php if(isset($alamat)){echo $alamat;}?>" required>
-                </div>
+                </div> -->
               </div>
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Simpan</button>

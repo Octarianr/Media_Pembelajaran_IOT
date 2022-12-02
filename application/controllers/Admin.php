@@ -35,6 +35,11 @@ class Admin extends CI_Controller {
 		$this->load->view('v_dashboard', $data);
 	}
 
+	public function dashboardu(){
+		$data['set'] = "dashboard";
+		$this->load->view('v_dashboardu', $data);
+	}
+
 	public function list_users(){
 		$data['set'] = "list-users";
 		$data['data'] = $this->m_admin->get_users();
@@ -516,6 +521,90 @@ class Admin extends CI_Controller {
 		$data['absensikeluar'] = $this->m_admin->get_absensi("keluar",$today,$tomorrow);
 
 		$this->load->view('v_soal5', $data);
+	}
+
+	public function bilbul(){
+		$data['set'] = "soal";
+
+		$today = strtotime("today");
+		$tomorrow = strtotime("tomorrow");
+
+		$data['absensimasuk'] = $this->m_admin->get_absensi("masuk",$today,$tomorrow);
+		$data['absensikeluar'] = $this->m_admin->get_absensi("keluar",$today,$tomorrow);
+
+		$this->load->view('v_bilbul', $data);
+	}
+
+	public function bilbul2(){
+		$data['set'] = "soal";
+
+		$today = strtotime("today");
+		$tomorrow = strtotime("tomorrow");
+
+		$data['absensimasuk'] = $this->m_admin->get_absensi("masuk",$today,$tomorrow);
+		$data['absensikeluar'] = $this->m_admin->get_absensi("keluar",$today,$tomorrow);
+
+		$this->load->view('v_bilbul2', $data);
+	}
+
+	public function bilbul3(){
+		$data['set'] = "soal";
+
+		$today = strtotime("today");
+		$tomorrow = strtotime("tomorrow");
+
+		$data['absensimasuk'] = $this->m_admin->get_absensi("masuk",$today,$tomorrow);
+		$data['absensikeluar'] = $this->m_admin->get_absensi("keluar",$today,$tomorrow);
+
+		$this->load->view('v_bilbul3', $data);
+	}
+
+	public function bilbul4(){
+		$data['set'] = "soal";
+
+		$today = strtotime("today");
+		$tomorrow = strtotime("tomorrow");
+
+		$data['absensimasuk'] = $this->m_admin->get_absensi("masuk",$today,$tomorrow);
+		$data['absensikeluar'] = $this->m_admin->get_absensi("keluar",$today,$tomorrow);
+
+		$this->load->view('v_bilbul4', $data);
+	}
+
+	public function bilbul5(){
+		$data['set'] = "soal";
+
+		$today = strtotime("today");
+		$tomorrow = strtotime("tomorrow");
+
+		$data['absensimasuk'] = $this->m_admin->get_absensi("masuk",$today,$tomorrow);
+		$data['absensikeluar'] = $this->m_admin->get_absensi("keluar",$today,$tomorrow);
+
+		$this->load->view('v_bilbul5', $data);
+	}
+
+	public function bilbul6(){
+		$data['set'] = "soal";
+
+		$today = strtotime("today");
+		$tomorrow = strtotime("tomorrow");
+
+		$data['absensimasuk'] = $this->m_admin->get_absensi("masuk",$today,$tomorrow);
+		$data['absensikeluar'] = $this->m_admin->get_absensi("keluar",$today,$tomorrow);
+
+		$this->load->view('v_bilbul6', $data);
+	}
+
+	public function bilbul7(){
+		$data['set'] = "soal";
+
+		$today = strtotime("today");
+		$tomorrow = strtotime("tomorrow");
+
+		$data['absensimasuk'] = $this->m_admin->get_absensi("masuk",$today,$tomorrow);
+		$data['absensikeluar'] = $this->m_admin->get_absensi("keluar",$today,$tomorrow);
+
+		$this->load->view('v_bilbul7', $data);
 	}
 
 	public function lastabsensi(){

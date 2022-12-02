@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Bahiana
+Author: Omnibus Type
+Url: http://www.fontsquirrel.com/fonts/bahiana
+
+Font: Montserrat
+Author: Julieta Ulanovsky
+Url: http://www.fontsquirrel.com/fonts/montserrat

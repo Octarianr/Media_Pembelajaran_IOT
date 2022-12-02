@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Sistem Absensi NodeMCU</title>
+  <title>Login Admin</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -23,11 +23,20 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition" style="background:#bbb">
+<!-- <body class="hold-transition" style="background:#bbb"> -->
+  <style>
+      body {
+        background-image: url('https://images.pexels.com/photos/1938348/pexels-photo-1938348.jpeg');
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
 <div class="login-box">
   <div class="login-logo">
     <div class="login-box-body">
-      <a class="text-green" href="<?=base_url();?>">Sistem Absensi <b>RFID NodeMCU</b></a><br>
+      <a class="text-green" href="<?=base_url();?>">Pengaturan<b>RFID dan NodeMCU</b></a><br>
     </div>
     <!-- <img src="<?=base_url();?>components/dist/img/logo.png" width="40%" height="auto"> -->
   </div>

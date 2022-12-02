@@ -7,11 +7,11 @@ if ($set=="list-users") {
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Daftar Users
+        Daftar Admin
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-users"></i> Daftar Users</a></li>
+        <li><a href="#"><i class="fa fa-users"></i> Daftar Admin</a></li>
         <!-- <li class="active">Dashboard</li> -->
       </ol>
     </section>
@@ -23,9 +23,9 @@ if ($set=="list-users") {
           <div class="box">
             <div class="box-header">
               <?php echo "<br>"; echo $this->session->flashdata('pesan');?>
-              <a href="<?php base_url()?>add_users"><button type="button" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-plus"></i> Tambah Users</button></a>
+              <a href="<?php base_url()?>add_users"><button type="button" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-plus"></i> Tambah Admin</button></a>
               <br><br><br>
-              <h1 class="box-title">Daftar Users</h1>
+              <h1 class="box-title">Daftar Admin</h1>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
@@ -92,12 +92,12 @@ if ($set=="list-users") {
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Tambah Users
+        Tambah Admin
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="<?=base_url();?>admin/list_users"><i class="fa fa-user"></i> Daftar Users</a></li>
-        <li class="active">Tambah Users</li>
+        <li><a href="<?=base_url();?>admin/list_users"><i class="fa fa-user"></i> Daftar Admin</a></li>
+        <li class="active">Tambah Admin</li>
       </ol>
     </section>
 
@@ -109,14 +109,14 @@ if ($set=="list-users") {
             <div class="box-header">
               <?php echo $this->session->flashdata('pesan');?>
               <br>
-              <h1 class="box-title">Tambah Users</h1>
+              <h1 class="box-title">Tambah Admin</h1>
             </div>
             <!-- /.box-header -->
             <?php echo form_open_multipart(base_url().'admin/save_users'); ?>
               <div class="box-body">
                 <div class="form-group">
                   <!-- <input type="hidden" name="id" value=""> -->
-                  <label>Nama Users</label>
+                  <label>Nama Admin</label>
                   <input type="text" name="users" class="form-control" placeholder="Enter name" required>
                 </div>
                 <div class="form-group">
@@ -158,12 +158,12 @@ if ($set=="list-users") {
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Edit Users
+        Edit Admin
         <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="<?=base_url();?>admin/list_users"><i class="fa fa-user"></i> Daftar Users</a></li>
-        <li class="active">Edit Users</li>
+        <li class="active">Edit Admin</li>
       </ol>
     </section>
 
@@ -175,14 +175,14 @@ if ($set=="list-users") {
             <div class="box-header">
               <?php echo "<br>"; echo $this->session->flashdata('pesan');?>
               <br>
-              <h1 class="box-title">Edit Users</h1>
+              <h1 class="box-title">Edit Admin</h1>
             </div>
             <!-- /.box-header -->
             <form role="form" action="<?=base_url();?>admin/save_edit_users" enctype="multipart/form-data" method="post" accept-charset="utf-8">
               <div class="box-body">
                 <div class="form-group">
                   <input type="hidden" name="id" value="<?php if(isset($id)){echo $id;}?>">
-                  <label>Nama Users</label>
+                  <label>Nama Admin</label>
                   <input type="text" name="users" class="form-control" value="<?php if(isset($nama)){echo $nama;}?>" placeholder="Enter name" required>
                 </div>
                 <div class="form-group">

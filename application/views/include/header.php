@@ -123,7 +123,7 @@ if($this->session->userdata('userlogin'))     // mencegah akses langsung tanpa l
         	<a href="<?=base_url();?>admin/dashboard"><i class="fa fa-dashboard"></i> Beranda</a>
         </li>
         <li <?php if($this->uri->segment(2)=="list_users"){echo 'class="active"';}?>>
-        	<a href="<?=base_url();?>admin/list_users"><i class="fa fa-users"></i> Daftar User</a>
+        	<a href="<?=base_url();?>admin/list_users"><i class="fa fa-users"></i> Daftar Admin</a>
         </li>
         <li <?php if($this->uri->segment(2)=="devices"){echo 'class="active"';}?>>
           <a href="<?=base_url();?>admin/devices"><i class="fa fa-gears"></i> Data Alat</a>
@@ -141,9 +141,9 @@ if($this->session->userdata('userlogin'))     // mencegah akses langsung tanpa l
             <li <?php if($this->uri->segment(3)=="datarfid"){echo 'class="active"';}?>><a href="<?=base_url();?>admin/rfid/datarfid"><i class="fa fa-credit-card"></i> Data RFID</a></li>
           </ul>
         </li>
-        <li <?php if($this->uri->segment(2)=="soal"){echo 'class="active"';}?>>
+        <!-- <li <?php if($this->uri->segment(2)=="soal"){echo 'class="active"';}?>>
           <a href="<?=base_url();?>admin/soal"><i class="fa fa-book"></i> Pembelajaran</a>
-        </li>
+        </li> -->
         <li <?php if($this->uri->segment(2)=="histori"){echo 'class="active"';}?>>
           <a href="<?=base_url();?>admin/histori"><i class="fa fa-retweet"></i> Histori Alat</a>
         </li>
