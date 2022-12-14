@@ -54,7 +54,7 @@ if ($set == "dashboard") {
           <!-- PRODUCT LIST -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <center><h3 class="box-title">Selamat datang di Beranda Sistem Absensi RFID NodeMCU</h3></center>
+              <center><h3 class="box-title">Selamat datang Di Sistem Wesbsite Media Pembelajaran Berbasis IOT</h3></center>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -112,7 +112,7 @@ if ($set == "dashboard") {
             <div class="inner">
               <h3><?=$jmlmasuk;?></h3>
 
-              <p>Masuk Hari ini</p>
+              <p>Jawaban Soal</p>
             </div>
             <div class="icon">
               <i class="ion ion-person"></i>
@@ -121,8 +121,8 @@ if ($set == "dashboard") {
           </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
+        <!-- <div class="col-lg-3 col-xs-6">
+          
           <div class="small-box bg-red">
             <div class="inner">
               <h3><?=$jmlkeluar;?></h3>
@@ -134,8 +134,8 @@ if ($set == "dashboard") {
             </div>
             <div class="small-box-footer"></div>
           </div>
-        </div>
-      </div>
+        </div>-->
+      </div> 
       <!-- /.row -->
     </section>
     <!-- /.content -->

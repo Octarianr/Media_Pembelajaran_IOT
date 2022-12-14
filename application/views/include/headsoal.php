@@ -1,14 +1,4 @@
-<?php
-if($this->session->userdata('userlogin'))     // mencegah akses langsung tanpa login
-{ 
-  $users = $this->session->userdata('userlogin');
-  $avatar = $this->session->userdata('avatar');
-}else{
-  //masuk tanpa login
-  $this->session->set_flashdata("pesan", "<div class=\"alert alert-danger\" id=\"alert\"><i class=\"glyphicon glyphicon-remove\"></i> Mohon Login terlebih dahulu</div>");
-  redirect(base_url().'login');
-}
-?>
+
 
 <html>
 <head>
@@ -66,17 +56,15 @@ if($this->session->userdata('userlogin'))     // mencegah akses langsung tanpa l
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
-      <!-- Navbar Right Menu -->
+      <!-- Navbar Right Menu 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?=base_url();?>components/dist/img/<?=$avatar;?>" class="user-image" alt="User Image">
               <span class="hidden-xs"><?=$this->session->userdata('userlogin');?></span>
             </a>
             <ul class="dropdown-menu">
-              <!-- User image -->
               <li class="user-header">
                 <img src="<?=base_url();?>components/dist/img/<?=$avatar;?>" class="img-circle" alt="User Image">
 
@@ -85,10 +73,8 @@ if($this->session->userdata('userlogin'))     // mencegah akses langsung tanpa l
                   <small></small>
                 </p>
               </li>
-              <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <!-- <a href="#" class="btn btn-default btn-flat">Profil</a> -->
                 </div>
                 <div class="pull-right">
                   <a href="<?=base_url();?>login/logout" class="btn btn-default btn-flat">Keluar</a>
@@ -97,7 +83,7 @@ if($this->session->userdata('userlogin'))     // mencegah akses langsung tanpa l
             </ul>
           </li>
         </ul>
-      </div>
+      </div>-->
 
     </nav>
   </header>
@@ -106,7 +92,7 @@ if($this->session->userdata('userlogin'))     // mencegah akses langsung tanpa l
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-      <div class="user-panel">
+      <!-- <div class="user-panel">
         <div class="pull-left image">
           <img src="<?=base_url();?>components/dist/img/<?=$avatar;?>" class="img-circle" alt="User Image">
         </div>
@@ -114,12 +100,14 @@ if($this->session->userdata('userlogin'))     // mencegah akses langsung tanpa l
           <p style="white-space: nowrap; width: 12em; overflow: hidden;	text-overflow: ellipsis;"><?=$this->session->userdata('userlogin');?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
-      </div>
+      </div> -->
 
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-
+        <li <?php if($this->uri->segment(2)=="dashboard"){echo 'class="active"';}?>>
+        	<a href="<?=base_url();?>admin/dashboardu"><i class="fa fa-dashboard"></i>Beranda</a>
+        </li>
           <li class="treeview <?php if($this->uri->segment(2)=="rfid"){echo 'active';}?>">
             <a href="#">
               <i class="fa fa-credit-card"></i>
@@ -150,26 +138,32 @@ if($this->session->userdata('userlogin'))     // mencegah akses langsung tanpa l
           <li class="treeview <?php if($this->uri->segment(2)=="rfid"){echo 'active';}?>">
             <a href="#">
               <i class="fa fa-credit-card"></i>
-              <span>Bercerita</span>
+              <span>Bilangan Bulat</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
               <li <?php if($this->uri->segment(2)=="soal"){echo 'class="active"';}?>>
-                <a href="<?=base_url();?>admin/soal"><i class="fa fa-book"></i>Episode 1</a>
+                <a href="<?=base_url();?>admin/bilbul"><i class="fa fa-book"></i>Bilangan Bulat</a>
               </li>
               <li <?php if($this->uri->segment(2)=="soal"){echo 'class="active"';}?>>
-                <a href="<?=base_url();?>admin/soal"><i class="fa fa-book"></i>Episode 2</a>
+                <a href="<?=base_url();?>admin/bilbul2"><i class="fa fa-book"></i>Penjumlahan</a>
               </li>
               <li <?php if($this->uri->segment(2)=="soal"){echo 'class="active"';}?>>
-                <a href="<?=base_url();?>admin/soal"><i class="fa fa-book"></i>Episode 3</a>
+                <a href="<?=base_url();?>admin/bilbul3"><i class="fa fa-book"></i>Pengurangan</a>
               </li>
               <li <?php if($this->uri->segment(2)=="soal"){echo 'class="active"';}?>>
-                <a href="<?=base_url();?>admin/soal"><i class="fa fa-book"></i>Episode 4</a>
+                <a href="<?=base_url();?>admin/bilbul4"><i class="fa fa-book"></i>Perkalian 1</a>
               </li>
               <li <?php if($this->uri->segment(2)=="soal"){echo 'class="active"';}?>>
-                <a href="<?=base_url();?>admin/soal"><i class="fa fa-book"></i>Episode 5</a>
+                <a href="<?=base_url();?>admin/bilbul5"><i class="fa fa-book"></i>Perkalian 2</a>
+              </li>
+              <li <?php if($this->uri->segment(2)=="soal"){echo 'class="active"';}?>>
+                <a href="<?=base_url();?>admin/bilbul6"><i class="fa fa-book"></i>Pembagian</a>
+              </li>
+              <li <?php if($this->uri->segment(2)=="soal"){echo 'class="active"';}?>>
+                <a href="<?=base_url();?>admin/bilbul7"><i class="fa fa-book"></i>Kesimpulan</a>
               </li>
             </ul>
           </li>

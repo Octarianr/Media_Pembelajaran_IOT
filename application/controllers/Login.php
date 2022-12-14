@@ -74,26 +74,26 @@ class Login extends CI_Controller {
 
 	// menambah user baru => http://absensi.test/login/adduser?username=admin&pass=123456
 	 public function adduser(){
-		// if (isset($_GET['username']) && isset($_GET['pass'])) {
-		// 	$username = $this->input->get('username');
-		// 	$pass = $this->input->get('pass');
-		// 	$hash = $this->bcrypt->hash_password($pass);	//encrypt password
+		if (isset($_GET['username']) && isset($_GET['pass'])) {
+			$username = $this->input->get('username');
+			$pass = $this->input->get('pass');
+			$hash = $this->bcrypt->hash_password($pass);	//encrypt password
 
-		// 	echo $username;
-		// 	echo "<br>";
-		// 	echo $pass;
-		// 	echo "<br>";
+			echo $username;
+			echo "<br>";
+			echo $pass;
+			echo "<br>";
 
-		// 	$data = array('username' => $username, 'password' => $hash);
+			$data = array('username' => $username, 'password' => $hash);
 
-		// 	if($this->m_login->adduser($data)){
-		// 		echo "add user berhasil";
-		// 	}else{
-		// 		echo "gagal add user";
-		// 	}
-		// }else{
-		// 	echo "salah parameter";
-		// }
+			if($this->m_login->adduser($data)){
+				echo "add user berhasil";
+			}else{
+				echo "gagal add user";
+			}
+		}else{
+			echo "salah parameter";
+		}
 	 }
 
 

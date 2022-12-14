@@ -53,7 +53,7 @@
         <div class="px-video-wrapper">
           <video class="px-video" width="100%" height="auto" controls>
       			<!-- video files -->
-      			<source src="http://localhost//absensi/media/soal5.mp4" type="video/mp4" />
+      			<source src="http://192.168.29.25//absensi/media/soal5.mp4" type="video/mp4" />
       			<!-- <source src="https://www.paypalobjects.com/webstatic/mktg/videos/PayPal_AustinSMB_baseline.webm" type="video/webm" />
 
       			text track file
@@ -61,7 +61,7 @@
 
       			fallback for browsers that don't support the video element -->
       			<div>
-      				<a href="http://localhost//absensi/media/soal5.mp4">
+      				<a href="http://192.168.29.25//absensi/media/soal5.mp4">
       					<img src="../../../media/soal1.png" width="640" height="360" alt="download video" />
       				</a>
       			</div>
